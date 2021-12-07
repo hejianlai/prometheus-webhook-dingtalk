@@ -7,7 +7,9 @@
 
 *`注意新版的钉钉机器人必需选择安全设置`*
 
-- 本文选用`加签` 等会需要用到
+- 本文选用`加签` 等会需要用到。
+
+![dingding](D:\Users\JackHe\Documents\GitHub\prometheus-webhook-dingtalk\images\dingding.jpg)
 
 ##  配置secret资源
 
@@ -110,3 +112,6 @@ receivers:
    - url: http://webhook-dingtalk/dingtalk/send/
 ```
 
+##  告警效果
+
+![xiaoguo](D:\Users\JackHe\Documents\GitHub\prometheus-webhook-dingtalk\images\xiaoguo.jpg)
