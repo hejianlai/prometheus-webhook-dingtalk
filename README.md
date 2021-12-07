@@ -115,3 +115,61 @@ receivers:
 ##  告警效果
 
 ![xiaoguo](images/xiaoguo.jpg)
+## 开发测试
+- alertmanager推送的json
+```json
+{
+    "receiver":"webhook",
+    "status":"ii",
+    "alerts":[
+        {
+            "status":"33",
+            "labels":{
+                "alertname":"AlertmanagerFailedToSendAlerts",
+                "container":"alertmanager",
+                "endpoint":"web",
+                "instance":"172.30.84.44:9093",
+                "integration":"webhook",
+                "job":"prometheus-kube-prometheus-alertmanager",
+                "namespace":"monitoring",
+                "pod":"alertmanager-prometheus-kube-prometheus-alertmanager-0",
+                "prometheus":"monitoring/prometheus-kube-prometheus-prometheus",
+                "service":"prometheus-kube-prometheus-alertmanager",
+                "severity":"warning"
+            },
+            "annotations":{
+                "description":"Alertmanager monitoring/alertmanager-prometheus-kube-prometheus-alertmanager-0 failed to send +Inf% of notifications to webhook.",
+                "runbook_url":"https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-alertmanagerfailedtosendalerts",
+                "summary":"An Alertmanager instance failed to send notifications."
+            },
+            "startsAt":"2021-12-07T05:58:17.226Z",
+            "endsAt":"2021-12-07T05:58:47.226Z",
+            "generatorURL":"http://prometheus-kube-prometheus-prometheus.monitoring:9090/graph?g0.expr=%28rate%28alertmanager_notifications_failed_total%7Bjob%3D%22prometheus-kube-prometheus-alertmanager%22%2Cnamespace%3D%22monitoring%22%7D%5B5m%5D%29+%2F+rate%28alertmanager_notifications_total%7Bjob%3D%22prometheus-kube-prometheus-alertmanager%22%2Cnamespace%3D%22monitoring%22%7D%5B5m%5D%29%29+%3E+0.01\\u0026g0.tab=1",
+            "fingerprint":"7a23c20f5f0615af"
+        }
+    ],
+    "groupLabels":{
+        "job":"prometheus-kube-prometheus-alertmanager",
+        "severity":"warning"
+    },
+    "commonLabels":{
+        "alertname":"AlertmanagerFailedToSendAlerts",
+        "container":"alertmanager",
+        "endpoint":"web",
+        "instance":"172.30.84.44:9093",
+        "integration":"webhook",
+        "job":"prometheus-kube-prometheus-alertmanager",
+        "namespace":"monitoring",
+        "pod":"alertmanager-prometheus-kube-prometheus-alertmanager-0",
+        "prometheus":"monitoring/prometheus-kube-prometheus-prometheus",
+        "service":"prometheus-kube-prometheus-alertmanager",
+        "severity":"warning"
+    },
+    "commonAnnotations":{
+        "description":"Alertmanager monitoring/alertmanager-prometheus-kube-prometheus-alertmanager-0 failed to send +Inf% of notifications to webhook.",
+        "runbook_url":"https://github.com/kubernetes-monitoring/kubernetes-mixin/tree/master/runbook.md#alert-name-alertmanagerfailedtosendalerts",
+        "summary":"An Alertmanager instance failed to send notifications."
+    }
+}
+```
+
