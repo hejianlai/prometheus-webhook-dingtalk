@@ -59,11 +59,11 @@ def hander_session():
     log.info(status)
     return status
 
-def alert_data(data,title,profile_url):
+def alert_data(data,title,dingtalk_url):
     headers = {'Content-Type':'application/json'}
     send_data = '{"msgtype": "markdown","markdown": {"title": \"%s\" ,"text": \"%s\"}}' %(title,data)  # type: str
     send_data = send_data.encode('utf-8')
-    reps = requests.post(url=profile_url, data=send_data, headers=headers)
+    reps = requests.post(url=dingtalk_url, data=send_data, headers=headers)
     return reps.text
 
 def make_sign(timestamp, secret):
