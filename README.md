@@ -9,7 +9,7 @@
 
 - 本文选用`加签` 等会需要用到。
 
-![dingding](D:\Users\JackHe\Documents\GitHub\prometheus-webhook-dingtalk\images\dingding.jpg)
+![dingding](images/dingding.jpg)
 
 ##  配置secret资源
 
@@ -114,4 +114,4 @@ receivers:
 
 ##  告警效果
 
-![xiaoguo](D:\Users\JackHe\Documents\GitHub\prometheus-webhook-dingtalk\images\xiaoguo.jpg)
+![xiaoguo](images/xiaoguo.jpg)
