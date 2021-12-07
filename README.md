@@ -3,7 +3,7 @@
 
 ## 创建钉钉机器人
 
-这里就不在BB了，官方文档有详细说明:[添加机器人到钉钉群 - 钉钉开放平台 (dingtalk.com)](https://developers.dingtalk.com/document/robots/use-group-robots)
+这里就不再BB了，官方文档有详细说明:[添加机器人到钉钉群 - 钉钉开放平台 (dingtalk.com)](https://developers.dingtalk.com/document/robots/use-group-robots)
 
 *`注意新版的钉钉机器人必需选择安全设置`*
 
