@@ -172,4 +172,26 @@ receivers:
     }
 }
 ```
+# prometheus-webhook-wechat
+## 启动命令
+```shell
+docker run -d --restart=always \
+-p 8069:8080 \
+--name prometheus-webhook-wechat-for-sentinel-8069  \
+-e ROBOT_TOKEN="1910c8ed-bae5-403c-6" \
+uhub.service.ucloud.cn/jackhe/prometheus-webhook-wechat:v1.1
+```
+## alertmanager
+```yaml
+  - receiver: 'webhook11'
+    group_wait: 1m
+    # 当天发送过的告警不再重新发送
+    repeat_interval: 24h
+    match:
+      type: sentinel
+- name: "webhook11"    #sentinel
+  webhook_configs:
+  - url: "http://xxxx:8069/wechat/send"
+    send_resolved: true
+```
 
